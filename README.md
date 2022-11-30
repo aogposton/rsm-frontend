@@ -1,46 +1,17 @@
-# rsm-challenge
+# Simple frontend Portfolio Piece
 
-This template should help get you started developing with Vue 3 in Vite.
+This repo was created to display my ability to stand up a SPA-frontend. It was created for 1 specific company interview but will remain availble for anyone else to also verify my ability to produce results.
 
-## Recommended IDE Setup
+- [The SPA can be interacted with here.]("https://symphonious-sable-b229b4.netlify.app/")
+- [The only public backend route is this.]("http://rsm.immaculateintellect.com/api/")
+- [The github repo of the Backend is here.]("https://github.com/immaculateintellect/rsm-backend")
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Hosting
 
-## Type Support for `.vue` Imports in TS
+- Hosted on Netlify
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Highlights
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- using Vue 3 and typescript
+- Pinia for statemanagement
+- leaflet.js for displaying maps
