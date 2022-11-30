@@ -29,7 +29,7 @@ export const useBrewStore = defineStore("brew", () => {
 
   const getList = async () => {
     brewList.value = (
-      await axios.get(`http://rsm.immaculateintellect.com/api/`)
+      await axios.get(`https://rsm.immaculateintellect.com/api/`)
     ).data;
   };
 
