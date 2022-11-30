@@ -1,4 +1,5 @@
 import { ref, computed } from "vue";
+import type { Ref } from "vue";
 import { defineStore } from "pinia";
 import axios from "axios";
 
@@ -18,12 +19,12 @@ interface breweryReturn {
   latitude: string;
   phone: string;
   website_url: string;
-  updated_at: date;
-  created_at: date;
+  updated_at: string;
+  created_at: string;
 }
 export const useBrewStore = defineStore("brew", () => {
-  const selectedBrew: breweryReturn = ref(null);
-  const brewList: breweryReturn[] = ref([]);
+  const selectedBrew: Ref<breweryReturn | null> = ref(null);
+  const brewList: Ref<breweryReturn[] | []> = ref([]);
   const city = ref("atlanta");
 
   const getList = async () => {
@@ -32,10 +33,9 @@ export const useBrewStore = defineStore("brew", () => {
         `https://api.openbrewerydb.org/breweries?by_city=${city.value}&per_page=50`
       )
     ).data;
-    console.log(brewList.value);
   };
 
-  const selectBrew = async (index) => {
+  const selectBrew = async (index: number) => {
     selectedBrew.value = brewList.value[index];
   };
 
