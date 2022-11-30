@@ -29,9 +29,7 @@ export const useBrewStore = defineStore("brew", () => {
 
   const getList = async () => {
     brewList.value = (
-      await axios.get(
-        `https://api.openbrewerydb.org/breweries?by_city=${city.value}&per_page=50`
-      )
+      await axios.get(`http://rsm.immaculateintellect.com/api/`)
     ).data;
   };
 
