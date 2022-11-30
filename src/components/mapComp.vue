@@ -4,11 +4,11 @@ import { onMounted, onUpdated, defineProps } from "vue";
 const props = defineProps(["lat", "long"]);
 
 const hasLocation = props.lat != null && props.long != null;
+let map = null;
 
 const setMap = () => {
   if (hasLocation) {
-    console.log(props);
-    var map = L.map("map").setView([props.lat, props.long], 13);
+    map = L.map("map").setView([props.lat, props.long], 13);
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
@@ -19,11 +19,16 @@ const setMap = () => {
   }
 };
 
+const updateMap = () => {
+  map = null;
+};
+
 onMounted(() => {
   setMap();
 });
 
 onUpdated(() => {
+  updateMap();
   setMap();
 });
 // console.log(map);

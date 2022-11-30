@@ -52,8 +52,10 @@ brewStore.getList();
                       href="javascript:;"
                       @click="brewStore.selectBrew(brewIndex)"
                     >
-                      Select Brewery
-                    </a>
+                      Select Brewery </a
+                    ><br />
+                    <span v-if="brewery.longitude == null">Has no map</span>
+                    <span v-else>Has a map</span>
                   </div>
                 </div>
               </div>
@@ -88,12 +90,11 @@ brewStore.getList();
                 >
               </div>
             </div>
-            <div class="row">
+            <div class="row" :key="brewStore.selectedBrew.latitude">
               <div class="col">
                 <mapComp
                   :lat="brewStore.selectedBrew.latitude"
                   :long="brewStore.selectedBrew.longitude"
-                  :key="brewStore.selectedBrew.id"
                 />
               </div>
             </div>
